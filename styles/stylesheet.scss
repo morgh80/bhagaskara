@@ -1,0 +1,86 @@
+$baseWidthCol: 100%/12;
+
+* {
+  box-sizing: border-box;
+  
+}
+
+body {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Lucida Grande", Arial, SansSerif;
+}
+
+[class*='container'] {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  .row{
+    [class*="col-"]{
+      float:left;
+      min-height: 1px;
+      border:1px solid red;
+    }
+    &:before,
+    &:after{
+      clear:both;
+      content:"";
+      display: table;
+    }
+    @for $i from 1 through 12{
+      .col-#{$i} {
+        width: $baseWidthCol * $i;
+      }
+    }
+  }
+}
+
+#mainBackground {
+  background-image: url("../img/base.jpg");
+  padding-bottom: 56%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.mainHeader {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.mainTitle {
+  text-align: center;
+  color: white;
+  .main-1 {
+    font-size: 6vw;
+    p {
+      margin-bottom: 3vw;
+      span {
+        color: #9d459a;
+      }
+    }
+  }
+  .main-2 {
+    font-size: 3vw;
+    p {
+      margin: 0;
+    }
+  }
+  .main-3 {
+    font-size: 2vw;
+  }
+}//koniec mainTitle
+
+
+[class*='icon-'] {
+  background-image: url("../img/hexagon.png");
+  padding-bottom: 13%;
+  background-repeat: no-repeat;
+  background-size: 70% auto;
+  background-position: center;
+}
+
+  .icon-bottom {
+  margin-top: 5rem;
+  }
+
