@@ -1,8 +1,8 @@
 $baseWidthCol: 100%/12;
+$break-header: 820px;
 
 * {
   box-sizing: border-box;
-  
 }
 
 body {
@@ -16,19 +16,19 @@ body {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  .row{
-    [class*="col-"]{
-      float:left;
+  .row {
+    [class*="col-"] {
+      float: left;
       min-height: 1px;
-      border:1px solid red;
+      border: 1px solid red;
     }
     &:before,
-    &:after{
-      clear:both;
-      content:"";
+    &:after {
+      clear: both;
+      content: "";
       display: table;
     }
-    @for $i from 1 through 12{
+    @for $i from 1 through 12 {
       .col-#{$i} {
         width: $baseWidthCol * $i;
       }
@@ -38,7 +38,7 @@ body {
 
 #mainBackground {
   background-image: url("../img/base.jpg");
-  padding-bottom: 56%;
+//  padding-bottom: 0%;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -52,25 +52,28 @@ body {
   text-align: center;
   color: white;
   .main-1 {
-    font-size: 6vw;
+    font-size: 3rem;
     p {
-      margin-bottom: 3vw;
-      span {
-        color: #9d459a;
+      margin: 1rem;
+        span {
+          color: #9d459a;
+        }
       }
     }
-  }
-  .main-2 {
-    font-size: 3vw;
-    p {
-      margin: 0;
+    .main-2 {
+      font-size: 2rem;
+      p {
+        margin-top: 0;
+      }
+    }
+    .main-3 {
+      font-size: 1rem;
+      margin-bottom: 3rem;
+      //@media (max-width: 1050px) {
+      //  margin-bottom: 0;
+      //}
     }
   }
-  .main-3 {
-    font-size: 2vw;
-  }
-}//koniec mainTitle
-
 
 [class*='icon-'] {
   background-image: url("../img/hexagon.png");
@@ -80,7 +83,47 @@ body {
   background-position: center;
 }
 
-  .icon-bottom {
-  margin-top: 5rem;
+  .icon-up,.icon-bottom {
+    list-style: none;
+    border: 1px solid green;
+    width:100%;
+    ul {
+      position: relative;
+    }
+    img {
+      position: absolute;
+      width: 3%;
+      margin-top: 2.7%;
+      margin-left: 4.3%;
+    }
   }
+
+.icon-bottom {
+  margin-top: 15%;
+
+  @media (max-width: 1000px) {
+    margin-top: 0;
+  }
+}
+
+  .icon-bottom:hover, .icon-up:hover {
+    background-image: url('../img/hexagon-hover.png');
+  }
+
+.arrow-down {
+    background-image: url("../img/arrow.png");
+    padding-bottom: 5rem;
+    background-repeat: no-repeat;
+    background-size: 6% auto;
+    background-position: center;
+    margin-top: auto;
+  }
+
+nav {
+  .col-3 {
+    border: 1px solid green;
+    width:10px;
+  }
+}
+
 
