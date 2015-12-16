@@ -1,7 +1,8 @@
 $baseWidthCol: 100%/12;
 $rwdWidthCol: 100%/6;
 $break-header: 820px;
-$borderCol: red;
+$borderCol: none
+;
 
 * {
   box-sizing: border-box;
@@ -260,11 +261,7 @@ nav {
 }
 
 
-//.iconMenu:hover {
-//  background-image: url('../img/shape-hover.png');
-//}
-
-.container-4 {
+.container-3 {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -314,20 +311,22 @@ nav {
   }
 }
 
-.container-5 {
+.container-4 {
   border: 1px $borderCol solid;
+  #img {
+    background: url("../img/mockup.png") no-repeat;
+    background-size: 90% auto;
+    padding-top: 30%;
+    background-position: center;
+
+  }
   .col-12 {
     margin-top: 3%;
     text-align: center;
   }
   .col-6 {
-    img {
-      position: absolute;
-      width: 40%;
-      margin-top: 2.7%;
-      margin-left: 4.3%;
-      padding-top: 4%;
-    }
+    height: 400px;
+
     p, button {
       margin-left: 20%;
       margin-right: 10%;
@@ -354,14 +353,85 @@ nav {
 
 
 
-.test {
-  height: 300px;
+.container-5 {
+
+  .background2 {
+    background: url("../img/background2.jpg") no-repeat;
+    background-size: 100% auto;
+    padding-bottom: 30%;
+    border: $borderCol 1px solid;
+    max-width: 1170px;
+    width: 100%;
+  }
+  .iconBackground2 {
+
+    background-position: center;
+    background-image: url("../img/hexagon.png");
+    background-repeat: no-repeat;
+    background-size: 9%;
+  }
+  .col-12 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    }
+  }
+
+#study {
+  padding-top: 10%;
+  width: 5%;
+  padding-bottom: 8%;
 }
 
+.container-6 {
+  .col-12 {
+    padding-top: 5%;
+    text-align: center;
+  }
+  #arrow-left, #arrow-right {
+    padding-top: 10%;
+    padding-bottom: 10%;
 
+    width: 6%;
+    float: right;
+    margin-right: 5px;
+  }
+  #arrow-right {
+    float: left;
+    margin-left: 5px;
+  }
+}
 
+.container-6 {
+  [id*='team-'] {
+    width: 50%;
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  [class*='info-'] {
+    text-align: center;
+  }
+}
 
+.fb {
+  width: 15%;
+  float: right;
+  margin-right: 5px;
+}
+.google {
+  width: 15%;
+  float: left;
+  margin-left: 5px;
 
+}
 
+.container-7 {
+  .col-12 {
+    padding-top: 5%;
+    text-align: center;
+  }
+}
 
 
