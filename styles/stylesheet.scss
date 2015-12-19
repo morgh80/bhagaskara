@@ -1,7 +1,7 @@
 $baseWidthCol: 100%/12;
 $rwdWidthCol: 100%/6;
 $break-header: 820px;
-$borderCol: red;
+$borderCol: none;
 $mainCol: #9d459a;
 ;
 
@@ -412,20 +412,23 @@ nav {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.2
+    opacity: 0.2;
   }
-
-  [class*='info-'] {
+  h2, p {
     text-align: center;
+    color: #cdcdcd;
+
   }
 }
 
 .selectedProfile {
-  color: #9d459a;
-img {
-    opacity: 1 !important;
-}
-}
+  h2, p {
+    color: #222222 !important;
+  }
+    img {
+      opacity: 1 !important;
+    }
+  }
 
 
 
@@ -515,7 +518,7 @@ img {
 .main-width {
   width: 80%;
   margin: 0 auto;
-  border:2px dashed green;
+  border:2px dashed $borderCol;
 }
 
 .container-8 {
