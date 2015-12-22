@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/stylesheet.css">
     <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+
 </head>
 <body>
     <header id="mainBackground">
@@ -64,7 +65,7 @@
 
     </header>
 
-   <!--dodac kontenere z wyskoscia na sztywno-->
+    <div class="sticky-container">
         <nav class="menu">
             <div class="main-width">
                 <div class="container-2">
@@ -89,6 +90,7 @@
                 </div>
             </div>
         </nav>
+    </div>
 
 <!--przeniesc do jednego kontenera ikone + tekst jako drugi div-->
     <section class="section-1 background-color">
@@ -141,7 +143,6 @@
             </div>
             <div class="row">
                 <div class="col-6" id="img">
-                        <!--<img src="img/mockup.png">-->
                 </div>
                 <div class=col-6>
                         <p>Aliquam metus neque, bibendum sit amet porta at, consequat et
@@ -275,7 +276,7 @@
 
         <div class="background2">
 
-            <div class="container-8">
+            <div class="container-8 main-width">
                 <div class="row">
                     <div class="col-12 iconBackground2">
                         <img id="bubble" src="img/bubble.png">
@@ -293,98 +294,172 @@
                 <div class="container-8">
 
                     <div class="row">
-                    <div class="wrapper">
-                        <div id="slider">
+                        <div class="wrapper">
+                            <div id="slider">
 
-                            <ul class>
-                                <li class="slide">
-                                    <div class="col-3 loremData">
-                                        <h1>365</h1>
-                                        <p>lorem ipsum</p>
-                                    </div>
+                                <ul class>
+                                    <li class="slide">
+                                        <div class="col-3 loremData">
+                                            <h1>365</h1>
+                                            <p>lorem ipsum</p>
+                                        </div>
 
-                                    <div class="col-3 loremData">
-                                        <h1>98%</h1>
-                                        <p>lorem ipsum</p>
-                                    </div>
+                                        <div class="col-3 loremData">
+                                            <h1>98%</h1>
+                                            <p>lorem ipsum</p>
+                                        </div>
 
-                                    <div class="col-3 loremData">
-                                        <h1>69</h1>
-                                        <p>lorem ipsum</p>
-                                    </div>
+                                        <div class="col-3 loremData">
+                                            <h1>69</h1>
+                                            <p>lorem ipsum</p>
+                                        </div>
 
-                                    <div class="col-3 loremData">
-                                        <h1>1,642</h1>
-                                        <p>lorem ipsum</p>
-                                    </div>
+                                        <div class="col-3 loremData">
+                                            <h1>1,642</h1>
+                                            <p>lorem ipsum</p>
+                                        </div>
 
-                                    <div class="col-12"><img class="influencer-1" src="img/pinterest.jpg"></div>
+                                        <div class="col-12"><img class="influencer-1" src="img/pinterest.jpg"></div>
 
-                                    <div class="col-12">
-                                        <p>“Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                                        condimentum. Duis mollis, est non commodo luctus, nisi erat”</p>
-                                        <h6>Lesale Cristoper, Pinterest</h6>
-                                    </div>
-                                </li>
+                                        <div class="col-12">
+                                            <p>“Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                                            condimentum. Duis mollis, est non commodo luctus”</p>
+                                            <h6>Lesale Cristoper, Pinterest</h6>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-12 pagination">
+                                                <ol class="pagination">
+                                                    <li class="active"></li>
+                                                    <li></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </li>
 
 
-                                <li class="slide">
-                                    <div class="col-3 loremData">
-                                        <h1>200</h1>
-                                        <p>lorem ipsum</p>
-                                    </div>
+                                    <li class="slide">
+                                        <div class="col-3 loremData">
+                                            <h1>200</h1>
+                                            <p>lorem ipsum</p>
+                                        </div>
 
-                                    <div class="col-3 loremData">
-                                        <h1>78%</h1>
-                                        <p>lorem ipsum</p>
-                                    </div>
+                                        <div class="col-3 loremData">
+                                            <h1>78%</h1>
+                                            <p>lorem ipsum</p>
+                                        </div>
 
-                                    <div class="col-3 loremData">
-                                        <h1>50</h1>
-                                        <p>lorem ipsum</p>
-                                    </div>
+                                        <div class="col-3 loremData">
+                                            <h1>50</h1>
+                                            <p>lorem ipsum</p>
+                                        </div>
 
-                                    <div class="col-3 loremData">
-                                        <h1>2,381</h1>
-                                        <p>lorem ipsum</p>
-                                    </div>
+                                        <div class="col-3 loremData">
+                                            <h1>2,381</h1>
+                                            <p>lorem ipsum</p>
+                                        </div>
 
-                                    <div class="col-12"><img class="influencer-2" src="img/duda.jpg"></div>
+                                        <div class="col-12"><img class="influencer-2" src="img/duda.jpg"></div>
 
-                                    <div class="col-12">
-                                        <p>Lorem ipsum dolor sit amet libero purus consectetuer nisl. Nullam sit amet, vulputate molestie.</p>
-                                        <h6>Andrzej Duda, Poland, CEO</h6>
-                                    </div>
-                                </li>
+                                        <div class="col-12 body">
+                                            <p>Lorem ipsum dolor sit amet libero purus consectetuer nisl. Nullam sit amet, vulputate molestie.</p>
+                                            <h6>Andrzej Duda, Poland, CEO</h6>
+                                        </div>
 
-                            </ul>
-                        </div>
+                                        <div class="row">
+                                            <div class="col-12 pagination">
+                                                <ol class="pagination">
+                                                    <li class="active"></li>
+                                                    <li></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </li>
 
-                        <div class="row">
-
-                                <div class="col-12 pagination">
-
-                                <ol id="pagination">
-                                    <li class="active"></li>
-                                    <li></li>
-                                </ol>
-
-                                </div>
+                                </ul>
                             </div>
+
+
+
                             </div>
                         </div>
                  </div>
             </div>
     </section>
-
-
-    <section class="section-8">
+    <section class="section-8 main-width">
         <div class="container-9">
 
+            <div class="row">
+                <div class="col-12"><h1><span class="corner" style="color: #545454">Our <span>portfolio</span></span></h1></div>
+            </div>
 
+            <div class="row">
+                <ul class="col-12">
+                    <li><a href="#" class="myButton">All</a></li>
+                    <li><a href="#" class="myButton">Web</a></li>
+                    <li><a href="#" class="myButton">Apps</a></li>
+                    <li><a href="#" class="myButton">Icons</a></li>
+
+                </ul>
+
+
+            </div>
+
+
+
+            <div class="gallery-container">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/gal01prev.jpg" data-full="img/gal01.jpg" />
+                            <h4>Neque Porro Quisquam</h4>
+                            <p>apps, icon, ui</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="img/gal02prev.jpg" data-full="img/gal02.jpg"/>
+                            <h4>Neque Porro Quisquam</h4>
+                            <p>apps, icon, ui</p>
+                        </div>
+                        <div class="col-4">
+                        <img src="img/gal03prev.jpg" data-full="img/gal03.jpg"/>
+                            <h4>Neque Porro Quisquam</h4>
+                            <p>apps, icon, ui</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="img/gal04prev.jpg" data-full="img/gal04.jpg"/>
+                                <h4>Neque Porro Quisquam</h4>
+                                <p>apps, icon, ui</p>
+                            </div>
+                            <div class="col-4">
+                                <img src="img/gal05prev.jpg" data-full="img/gal05.jpg"/>
+                                <h4>Neque Porro Quisquam</h4>
+                                <p>apps, icon, ui</p>
+                            </div>
+                            <div class="col-4">
+                                <img src="img/gal06prev.jpg" data-full="img/gal06.jpg" />
+                                <h4>Neque Porro Quisquam</h4>
+                                <p>apps, icon, ui</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            <div class="row">
+                <ul class="col-12">
+                    <li><a href="#" id="watchAllButton" class="myButton">Watch more</a></li>
+
+
+                </ul>
 
 
         </div>
+
+
+
+
     </section>
 
 

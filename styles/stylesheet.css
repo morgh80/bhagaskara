@@ -114,7 +114,7 @@ span {
     position: absolute;
     width: 3%;
     margin-top: 2.7%;
-    margin-left: 4.3%; }
+    margin-left: 5.2%; }
 
 .icon-bottom {
   margin-top: 15%; }
@@ -144,6 +144,9 @@ span {
   z-index: 100;
   border-top: 0;
   background-color: white; }
+
+.sticky-container {
+  height: 45px; }
 
 nav .col-3 {
   padding-left: 5%;
@@ -620,7 +623,7 @@ nav .col-9 ul {
   margin-left: auto;
   margin-right: auto; }
 .container-8 p {
-  font-size: .9em;
+  font-size: .7em;
   color: #545454; }
 .container-8 h6 {
   text-transform: uppercase;
@@ -634,13 +637,15 @@ nav .col-9 ul {
 .invisible {
   display: none; }
 
-#pagination {
+.pagination {
   clear: both;
   width: 75px;
-  margin: 25px auto 0;
-  padding: 0; }
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
-#pagination li {
+.pagination li {
   list-style: none;
   float: left;
   margin: 0 2px;
@@ -650,7 +655,7 @@ nav .col-9 ul {
   border: 1px #7f7f7f solid;
   border-radius: 10px; }
 
-#pagination li.active {
+.pagination li.active {
   background: #7f7f7f; }
 
 .wrapper {
@@ -662,5 +667,61 @@ nav .col-9 ul {
       float: left;
       text-align: center;
       width: 800px; }
+
+.container-9 .col-12 {
+  margin-top: 3%;
+  text-align: center; }
+.container-9 ul {
+  list-style-type: none;
+  margin-bottom: 1em;
+  padding: 0;
+  margin-bottom: 3%; }
+  .container-9 ul li {
+    position: relative;
+    display: inline; }
+
+.myButton {
+  background-color: white;
+  color: #9d459a;
+  border-radius: 3px;
+  border: 1px solid;
+  display: inline-block;
+  cursor: pointer;
+  font-size: .7rem;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.myButton:hover {
+  background-color: #9d459a;
+  color: white; }
+
+.myButton:active {
+  position: relative;
+  top: 1px; }
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.col-4 {
+  border: none;
+  margin-right: 1%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  max-width: 30% !important; }
+  .col-4 img {
+    max-width: 100%; }
+  .col-4 h4, .col-4 p {
+    text-align: center;
+    margin: 1%; }
+  .col-4 p {
+    font-size: 0.7em;
+    color: #7f7f7f; }
+
+#watchAllButton {
+  text-transform: none;
+  padding: 13px 25px; }
 
 /*# sourceMappingURL=stylesheet.css.map */

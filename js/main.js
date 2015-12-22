@@ -16,35 +16,49 @@ $(document).ready(function(){
 
     //Slider function
 
-    function moveSlides (){
+    function moveSlides () {
 
         var wrapperWidth = $(".wrapper").outerWidth();
         var slider = $("#slider");
         var slides = $(".slide");
 
+        //$(window).resize(function () {
+        //    wrapperWidth = $(".wrapper").outerWidth();
+        //
+        //});
+
         var numberOfSlide = slides.length;
 
         var widthOfSlide = wrapperWidth;
 
+
+
         slides.css("width", wrapperWidth);
-        slider.css("width", numberOfSlide * wrapperWidth);
+        slider.css("width", numberOfSlide * wrapperWidth + 5);
 
         var counter = 1;
 
-        setInterval(function(){
+        setInterval(function () {
 
             slider.animate({
                 left: -widthOfSlide * counter
             });
 
-            if(counter >= numberOfSlide-1){
-                counter=0;
+            if (counter >= numberOfSlide - 1) {
+                counter = 0;
             }
-            else{
+            else {
                 counter++;
             }
-        },3000);
-    }
+        }, 3000);
+
+
+
+};
+
+
+
+
 
     //Buttons skipping to next profile
     function skipButtons(){
@@ -120,6 +134,13 @@ $(document).ready(function(){
         });
 
     };
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        var gallery = new MaterialPhotoGallery(elem);
+    });
+
 
     skipButtons();
     moveSlides();
