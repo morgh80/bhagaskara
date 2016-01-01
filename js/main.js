@@ -135,13 +135,59 @@ $(document).ready(function(){
 
     };
 
+    function showAllGallery(){
+
+    watchAllButton =$("#watchAllButton");
+    rowHidden = $("#row-hidden");
+
+    var iteration = 0;
+
+        rowHidden.addClass("hidden");
+        watchAllButton.on("click", function(event) {
+
+                if (iteration%2 == 0) {
+                    rowHidden.removeClass("hidden");
+                    watchAllButton.text("Watch less");
+                }
+                    else {
+                        rowHidden.addClass("hidden");
+                        watchAllButton.text("Watch more");
+                }
+                iteration++;
+            });
+        };
+
+    //function filterGallery() {
+    //
+    //webFilter = $(".web");
+    //appsFilter = $(".apps");
+    //iconsFilter = $(".icons");
+    //allButton=$("#allButton");
+    //webButton=$("#webButton");
+    //appsButton=$("#appsButton");
+    //iconsButton=$("#iconsButton");
+    //
+    //webButton.on("click", function(event) {
+    //    appsFilter.addClass("hidden");
+    //    iconsFilter.addClass("hidden");
+    //
+    //
+    //});
 
 
-    document.addEventListener('DOMContentLoaded', function() {
-        var gallery = new MaterialPhotoGallery(elem);
-    });
 
 
+
+
+
+
+
+
+
+
+
+    //filterGallery()
+    showAllGallery();
     skipButtons();
     moveSlides();
     stickyMenu();
