@@ -19,7 +19,7 @@ span {
   [class*='container'] .row [class*="col-"] {
     float: left;
     min-height: 1px;
-    border: 1px solid red; }
+    border: 1px solid none; }
   [class*='container'] .row:before, [class*='container'] .row:after {
     clear: both;
     content: "";
@@ -56,7 +56,7 @@ span {
   [class*='containerRWD'] .row [class*="col-"] {
     float: left;
     min-height: 1px;
-    border: 1px solid red; }
+    border: 1px solid none; }
   [class*='containerRWD'] .row:before, [class*='containerRWD'] .row:after {
     clear: both;
     content: "";
@@ -107,7 +107,7 @@ span {
 
 .icon-up, .icon-bottom {
   list-style: none;
-  border: 1px solid red;
+  border: 1px solid none;
   width: 100%; }
   .icon-up ul, .icon-bottom ul {
     position: relative; }
@@ -135,7 +135,12 @@ span {
   margin-top: auto; }
 
 .container-2 {
-  border: 2px solid red; }
+  border: 2px solid none;
+  position: relative; }
+  .container-2 img {
+    width: 80%;
+    margin-top: 1%;
+    margin-bottom: 1%; }
 
 .sticky {
   position: fixed;
@@ -145,6 +150,10 @@ span {
   z-index: 100;
   border-top: 0;
   background-color: white; }
+  .sticky img {
+    width: 80%;
+    margin-top: 1%;
+    margin-bottom: 1%; }
 
 .sticky-container {
   height: 45px; }
@@ -165,15 +174,13 @@ nav .col-9 ul {
     display: inline;
     width: 10px;
     padding-right: 1em; }
-    nav .col-9 ul li img {
-      width: 50%;
-      padding-left: 10rem;
-      max-width: 20%;
-      padding-top: 4%;
-      padding-bottom: 4%; }
-      @media (max-width: 775px) {
-        nav .col-9 ul li img {
-          padding-right: 0.5%; } }
+  nav .col-9 ul img {
+    width: 50%;
+    padding-left: 10rem;
+    max-width: 20%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-right: 0.5%; }
 
 .section-1 .container-3 {
   display: flex;
@@ -183,7 +190,7 @@ nav .col-9 ul {
   align-content: center;
   align-items: center;
   padding-top: 3%;
-  border: 1px solid red; }
+  border: 1px solid none; }
   .section-1 .container-3 .iconMenu {
     order: 0;
     flex: 0 1 auto;
@@ -191,54 +198,33 @@ nav .col-9 ul {
     padding-bottom: 13%;
     width: 10%;
     margin-top: 5%;
-    border: 1px red solid; }
+    border: 1px none solid; }
 
 .background-color {
   background-size: 100% auto;
   background-color: #eaeaea;
-  padding-bottom: 10%; }
-
-#heart {
-  background: url("../img/menu11.png") no-repeat;
-  background-size: 90% auto;
-  background-position: center; }
-
-#diamond {
-  background: url("../img/menu12.png") no-repeat;
-  background-size: 90% auto;
-  background-position: center; }
-
-#cup {
-  background: url("../img/menu13.png") no-repeat;
-  background-size: 90% auto;
-  background-position: center; }
-
-#phone {
-  background: url("../img/menu14.png") no-repeat;
-  background-size: 90% auto;
-  background-position: center; }
+  padding-bottom: 1%; }
 
 .container-3 {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-content: center;
-  align-items: center;
-  height: 200px;
-  border: 1px solid red; }
+  border: 1px solid none; }
+
+img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .item {
-  order: 0;
-  flex: 0 1 auto;
-  align-self: flex-start;
   padding-bottom: 13%;
-  width: 20%;
   margin-top: 5%;
-  border: 1px red solid;
+  border: 1px none solid;
   font-size: 85%;
-  text-align: center;
-  color: #545454; }
+  color: #545454;
+  text-align: center; }
+
+p {
+  margin-left: 10%;
+  margin-right: 10%; }
 
 .corner {
   position: relative; }
@@ -262,7 +248,7 @@ nav .col-9 ul {
     width: 20px; }
 
 .container-4 {
-  border: 1px red solid; }
+  border: 1px none solid; }
   .container-4 #img {
     background: url("../img/mockup.png") no-repeat;
     background-size: 90% auto;
@@ -297,7 +283,7 @@ nav .col-9 ul {
   background-position: center center;
   background-size: cover;
   padding-bottom: 4%;
-  border: red 1px solid;
+  border: none 1px solid;
   width: 100%; }
 
 .container-5 .iconBackground2, .container-8 .iconBackground2 {
@@ -344,21 +330,19 @@ nav .col-9 ul {
 .container-6 h2, .container-6 p {
   text-align: center;
   color: #cdcdcd; }
+  .container-6 h2 .fb, .container-6 p .fb {
+    width: 15%;
+    float: right;
+    margin-right: 5px; }
+  .container-6 h2 .google, .container-6 p .google {
+    width: 15%;
+    float: left;
+    margin-left: 5px; }
 
 .selectedProfile h2, .selectedProfile p {
   color: #222222 !important; }
 .selectedProfile img {
   opacity: 1 !important; }
-
-.fb {
-  width: 15%;
-  float: right;
-  margin-right: 5px; }
-
-.google {
-  width: 15%;
-  float: left;
-  margin-left: 5px; }
 
 .container-7 .col-12 {
   padding-top: 5%;
@@ -607,7 +591,7 @@ nav .col-9 ul {
 .main-width {
   width: 80%;
   margin: 0 auto;
-  border: 2px dashed red; }
+  border: 2px dashed none; }
 
 .container-8 .loremData {
   margin-top: 5%;
@@ -708,13 +692,13 @@ nav .col-9 ul {
   flex-wrap: wrap; }
 
 .col-4 {
-  border: red;
+  border: none;
   margin-right: 1%;
   margin-left: 2%;
   margin-bottom: 2%;
   max-width: 30% !important; }
   .col-4 img {
-    max-width: 100%; }
+    width: 100%; }
   .col-4 h4, .col-4 p {
     text-align: center;
     margin: 1%; }
@@ -743,7 +727,7 @@ nav .col-9 ul {
   margin-bottom: 5%;
   max-width: 100%; }
 .container-10 .col-6 {
-  border: red 1px solid;
+  border: none 1px solid;
   padding: 1em; }
 .container-10 #input-name, .container-10 #input-mail, .container-10 #input-message, .container-10 #button-mail {
   padding: 0.5em;
@@ -760,14 +744,15 @@ nav .col-9 ul {
   float: left; }
 .contact-sm li {
   display: inline;
-  float: left;
-  margin: 0; }
+  float: left; }
 .contact-sm img {
   margin-top: 1em;
-  width: 50%;
-  float: left; }
+  width: 50%; }
 
 footer {
   text-align: center; }
+  footer img {
+    width: 10%;
+    margin-bottom: 5%; }
 
 /*# sourceMappingURL=stylesheet.css.map */
