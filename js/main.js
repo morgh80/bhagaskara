@@ -56,10 +56,6 @@ $(document).ready(function(){
 
 };
 
-
-
-
-
     //Buttons skipping to next profile
     function skipButtons(){
 
@@ -103,32 +99,42 @@ $(document).ready(function(){
         };
 
         profiles[selectedProfile].classList.add("selectedProfile");
+
         addSkillClasses();
 
         buttonRight.on("click", function(event){
             profiles[selectedProfile].classList.remove("selectedProfile");
+            profiles[selectedProfile].classList.add("profilesHideRWD");
+
             removeSkillClasses();
             selectedProfile++;
             if (selectedProfile >= profiles.length) {
                 selectedProfile=0;
                 profiles[selectedProfile].classList.add("selectedProfile");
+                profiles[selectedProfile].classList.remove("profilesHideRWD");
                 addSkillClasses();
             } else {
                 profiles[selectedProfile].classList.add("selectedProfile");
+                profiles[selectedProfile].classList.remove("profilesHideRWD");
+
                 addSkillClasses();
             }
         });
 
         buttonLeft.on("click", function(event){
             profiles[selectedProfile].classList.remove("selectedProfile");
+            profiles[selectedProfile].classList.add("profilesHideRWD");
             removeSkillClasses();
             selectedProfile--;
             if (selectedProfile < 0) {
                 selectedProfile = (profiles.length-1);
                 profiles[selectedProfile].classList.add("selectedProfile");
+                profiles[selectedProfile].classList.remove("profilesHideRWD");
                 addSkillClasses();
             } else {
                 profiles[selectedProfile].classList.add("selectedProfile");
+                profiles[selectedProfile].classList.remove("profilesHideRWD");
+
                 addSkillClasses();
             }
         });
@@ -174,11 +180,48 @@ $(document).ready(function(){
     //
     //});
 
+    function hamburger() {
+        var hamburgerIcon = $("#hamburger");
+        var hamburgerMenu = $(".hamburgerMenu");
+        var menuItems = $(".classicMenu");
+        var counter = 1;
+
+        hamburgerIcon.on("click", function () {
+        counter++;
+            if (counter %2 === 0) {
+            hamburgerMenu.addClass("hamburgerMenuShow");
+            hamburgerMenu.removeClass("hamburgerMenuHide");
+            menuItems.removeClass("classicMenu");
+            } else {
+                hamburgerMenu.removeClass("hamburgerMenuShow");
+                hamburgerMenu.addClass("hamburgerMenuHide");
+                menuItems.addClass("classicMenu");
+            }
+
+        });
 
 
 
 
+    }
 
+    //function hamburger() {
+    //    var classicMenu = $(".classicMenu");
+    //    var hamburgerMenu = $("#hamburerMenu");
+    //    var winSize = $(window).width();
+    //
+    //    if (winSize < 900) {
+    //        classicMenu.addClass("hidden");
+    //    }
+
+        //menu.on("click", function () {
+        //    var winSize = $(window).width();
+        //
+        //    if (winSize < 900) {
+        //        menu.children().toggle();
+        //    }
+        //});
+    //}
 
 
 
@@ -191,11 +234,13 @@ $(document).ready(function(){
     skipButtons();
     moveSlides();
     stickyMenu();
+    hamburger();
 
 
 
 
 });
+
 
 
 
